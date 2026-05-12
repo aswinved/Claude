@@ -42,8 +42,8 @@
                 <span class="meta-badge">10+ Anti-patterns</span>
             </div>
             <div class="hero-cta">
-                <button class="btn btn-primary">Start Learning</button>
-                <button class="btn btn-secondary">View Exam Details</button>
+                <button class="btn btn-primary" onclick="scrollToSection('pdf-guide')">Start Learning</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('overview')">View Exam Details</button>
             </div>
         </div>
     </section>
@@ -415,6 +415,28 @@
         </div>
     </section>
 
+    <!-- PDF Guide Viewer -->
+    <section class="pdf-guide-section" id="pdf-guide">
+        <div class="container">
+            <h2>Study Guide</h2>
+            <p class="section-subtitle">Interactive PDF guide for Claude Certified Architect Foundations exam</p>
+
+            <div class="pdf-viewer-container">
+                <div id="pdf-viewer" class="pdf-viewer">
+                    <canvas id="pdfCanvas"></canvas>
+                </div>
+
+                <div class="pdf-controls">
+                    <button id="prevBtn" class="pdf-btn" title="Previous Page">← Previous</button>
+                    <div class="pdf-page-info">
+                        Page <span id="currentPage">0</span> of <span id="totalPages">0</span>
+                    </div>
+                    <button id="nextBtn" class="pdf-btn" title="Next Page">Next →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -446,5 +468,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </body>
 </html>
