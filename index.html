@@ -22,7 +22,7 @@
                 <li><a href="./practical_test_en.html" class="nav-link">Practical Test</a></li>
                 <li><a href="https://claudecertifications.com/claude-certified-architect/exam-guide" target="_blank" class="nav-link">Official Site</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" onclick="document.querySelector('.nav-menu').classList.toggle('active'); this.classList.toggle('active');">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -42,8 +42,8 @@
                 <span class="meta-badge">10+ Anti-patterns</span>
             </div>
             <div class="hero-cta">
-                <button class="btn btn-primary" a href="./guide_en.pdf">Start Learning</button>
-                <button class="btn btn-secondary" onclick="smoothScrollTo('overview')">View Exam Details</button>
+                <button class="btn btn-primary" onclick="window.location.href='./guide_en.pdf'">Start Learning</button>
+                <button class="btn btn-secondary" onclick="window.location.href='./practical_test_en.html'">View test exam</button>
             </div>
         </div>
     </section>
@@ -103,7 +103,7 @@
                     </div>
                     <div class="domain-content">
                         <h3>API Fundamentals & Authentication</h3>
-                        <p>Deep understanding of Claude API structure, authentication mechanisms, token management, and secure credential handling. Learn request/response patterns and best practices for API integration.</p>
+                        <p>Deep understanding of Claude API structure, authentication mechanisms, token management, and secure credential handling. Learn request/response patterns and best practices.</p>
                         <div class="domain-weight">20% Weight</div>
                     </div>
                 </div>
