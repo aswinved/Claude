@@ -78,6 +78,16 @@ function scrollToSection(sectionName) {
     showSection(sectionName);
 }
 
+// ===== Smooth Scroll Helper =====
+function smoothScrollTo(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        console.warn(`Element with ID "${elementId}" not found`);
+    }
+}
+
 // ===== FAQ Accordion =====
 function initializeFAQ() {
     document.querySelectorAll('.faq-question').forEach(button => {
@@ -394,6 +404,7 @@ function hideLoadingState() {
 window.scrollToSection = scrollToSection;
 window.printPage = printPage;
 window.showNotification = showNotification;
+window.smoothScrollTo = smoothScrollTo;
 
 // ===== Session Storage for Settings =====
 function saveUserSettings() {
